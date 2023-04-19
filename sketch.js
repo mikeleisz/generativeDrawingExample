@@ -6,7 +6,7 @@ var agents = [];
 
 function setup() {
 
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(800, 800);
 
   background(0);
   
@@ -15,10 +15,10 @@ function setup() {
   }
 }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  background(0);
-}
+// function windowResized() {
+//   resizeCanvas(windowWidth, windowHeight);
+//   background(0);
+// }
 
 function draw() {
   for (let i = 0; i < agents.length; i++) {
