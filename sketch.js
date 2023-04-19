@@ -5,19 +5,22 @@ const DRAW_DISTANCE_THRESHOLD = 200;
 var agents = [];
 
 function setup() {
-  createCanvas(800, 800);
-  background(0);
 
-  print("Testing the debug console in VS Code");
+  createCanvas(windowWidth, windowHeight);
+
+  background(0);
   
   for (let i = 0; i < 16; i++) {
     createAgent(random(width), random(height));
   }
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  background(0);
+}
+
 function draw() {
-  // background(255);
-  
   for (let i = 0; i < agents.length; i++) {
     
     let a = agents[i];
